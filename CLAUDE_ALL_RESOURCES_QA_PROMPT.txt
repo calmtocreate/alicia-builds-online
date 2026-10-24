@@ -1,0 +1,21 @@
+I'm uploading the updated Alicia Builds Online resource hub.
+
+Please act as a senior front-end developer, accessibility specialist, and QA reviewer. **Review this existing code without redesigning or deploying it.**
+
+The owner explicitly wants **ALL 16 resources available now**, rather than gradually unlocking cards as each weekly video publishes. That is an intentional business decision, NOT a defect. The code should have `previewMode:false` and all 16 `published:true`. The shelf must OPEN on "All 16 resources", with all 16 cards rendered at initial load (not just when the visitor clicks another filter). This resolves a discoverability issue where "Content That Attracts" appeared missing behind the initial "Find my direction" filter. Search must span all categories.
+
+Inspect and report:
+1. Confirm exactly 16 unique resource IDs, all 16 `published:true`, 16 valid HTTPS destination URLs, no duplicate resources, and `previewMode:false`.
+2. Confirm all 16 are reachable via category filters and "All resources" on the public-style view; there must be no "not yet featured" labels or "Test resource link" wording.
+3. Preserve ALL owner-supplied referral URL strings EXACTLY; particularly `https://pictory.ai?ref=shannon45`. Owner confirmed that `shannon45` is her affiliate code and dashboard attribution is verified.
+4. Verify six affiliate resource cards show clear disclosures immediately before the links and use appropriate rel values including `sponsored nofollow`.
+5. Test search, filter reset, keyboard navigation, label wording, focus management, narrow/mobile layouts at 320, 390, 768 and 1440px, accessibility, links, no horizontal overflow, and console errors.
+6. Check that the illustrated-avatar alt text is clear and accurate.
+7. Check that no unprovided video links, pricing, income claims, or offer facts were invented.
+8. Confirm the website still has temporary `noindex,nofollow`, and social-share URLs remain relative until the actual Netlify URL is known.
+9. Note all external shop destinations are **owner-supplied, not independently verified**; do NOT change/refactor URL strings or claim referral tracking was tested by you.
+10. Preserve its calm, readable visual identity and vanilla HTML/CSS/JS architecture.
+
+Return a concise PASS / NEEDS ATTENTION / MANUAL CHECK report. If any code changes are genuinely required, show complete revised files and explain the changes.
+
+Do not deploy, do not flip noindex, do not introduce analytics, email forms, popups, new products, or a weekly publication gating system.
